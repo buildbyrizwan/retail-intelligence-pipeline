@@ -4,13 +4,6 @@ An end-to-end analytics engineering platform that ingests raw transactional reta
 
 ---
 
-## 🏗️ Architecture
-Markdown
-# 📊 Retail Intelligence Pipeline & Analytics Platform
-
-An end-to-end analytics engineering platform that ingests raw transactional retail events, validates schema contracts, builds dimensional Kimball star-schema models via dbt, and serves an executive intelligence dashboard.
-
----
 
 ## 🏗️ Architecture
 
