@@ -1,0 +1,739 @@
+[0m23:28:57.348144 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017626AF9ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017629082CE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017629082AD0>]}
+
+
+============================== 23:28:57.363589 | e0f07c94-c685-42e5-85e4-06c4f155fd34 ==============================
+[0m23:28:57.363589 [info ] [MainThread]: Running with dbt=1.12.5
+[0m23:28:57.368491 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': '.', 'invocation_command': 'dbt run --profiles-dir .', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_path': 'C:\\Users\\Rehan\\retail-intelligence-pipeline\\dbt_project\\logs'}
+[0m23:28:58.121497 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e0f07c94-c685-42e5-85e4-06c4f155fd34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017628FE7D60>]}
+[0m23:28:58.397839 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e0f07c94-c685-42e5-85e4-06c4f155fd34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000176290069E0>]}
+[0m23:28:58.404884 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m23:28:59.230538 [debug] [MainThread]: checksum: 4f3dc4228f1504262a79c49ff1fab889bb35cd8ab28769a6a656f847818f9693, vars: {}, profile: retail_warehouse, target: dev, version: 1.12.5
+[0m23:28:59.232568 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m23:28:59.232568 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'e0f07c94-c685-42e5-85e4-06c4f155fd34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017629251E70>]}
+[0m23:29:02.271173 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e0f07c94-c685-42e5-85e4-06c4f155fd34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001762A8137C0>]}
+[0m23:29:02.513090 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Rehan\retail-intelligence-pipeline\dbt_project\target\manifest.json
+[0m23:29:02.513090 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Rehan\retail-intelligence-pipeline\dbt_project\target\semantic_manifest.json
+[0m23:29:02.612065 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\Rehan\retail-intelligence-pipeline\dbt_project\target\osi_document.json
+[0m23:29:02.646196 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e0f07c94-c685-42e5-85e4-06c4f155fd34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001762A88F3D0>]}
+[0m23:29:02.654708 [info ] [MainThread]: Found 3 models, 477 macros
+[0m23:29:02.654708 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e0f07c94-c685-42e5-85e4-06c4f155fd34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001762A88EB30>]}
+[0m23:29:02.662049 [info ] [MainThread]: 
+[0m23:29:02.663007 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m23:29:02.663007 [info ] [MainThread]: 
+[0m23:29:02.663007 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m23:29:02.674662 [debug] [ThreadPool]: Acquiring new postgres connection 'list_retail_warehouse'
+[0m23:29:02.702144 [debug] [ThreadPool]: Acquiring new postgres connection 'list_retail_warehouse'
+[0m23:29:03.054456 [debug] [ThreadPool]: Using postgres connection "list_retail_warehouse"
+[0m23:29:03.055603 [debug] [ThreadPool]: Using postgres connection "list_retail_warehouse"
+[0m23:29:03.057183 [debug] [ThreadPool]: On list_retail_warehouse: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "retail_warehouse", "target_name": "dev", "connection_name": "list_retail_warehouse"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m23:29:03.058309 [debug] [ThreadPool]: On list_retail_warehouse: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "retail_warehouse", "target_name": "dev", "connection_name": "list_retail_warehouse"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m23:29:03.061326 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:29:03.063321 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:29:03.478343 [debug] [ThreadPool]: SQL status: SELECT 7 in 0.415 seconds
+[0m23:29:03.480097 [debug] [ThreadPool]: SQL status: SELECT 7 in 0.418 seconds
+[0m23:29:03.480912 [debug] [ThreadPool]: On list_retail_warehouse: Close
+[0m23:29:03.480912 [debug] [ThreadPool]: On list_retail_warehouse: Close
+[0m23:29:03.480912 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_retail_warehouse, now create_retail_warehouse_public_staging)
+[0m23:29:03.480912 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_retail_warehouse, now create_retail_warehouse_public_analytics)
+[0m23:29:03.495011 [debug] [ThreadPool]: Creating schema "database: "retail_warehouse"
+schema: "public_analytics"
+"
+[0m23:29:03.480912 [debug] [ThreadPool]: Creating schema "database: "retail_warehouse"
+schema: "public_staging"
+"
+[0m23:29:03.507290 [debug] [ThreadPool]: Using postgres connection "create_retail_warehouse_public_analytics"
+[0m23:29:03.512708 [debug] [ThreadPool]: Using postgres connection "create_retail_warehouse_public_staging"
+[0m23:29:03.513736 [debug] [ThreadPool]: On create_retail_warehouse_public_analytics: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "retail_warehouse", "target_name": "dev", "connection_name": "create_retail_warehouse_public_analytics"} */
+create schema if not exists "public_analytics"
+[0m23:29:03.513736 [debug] [ThreadPool]: On create_retail_warehouse_public_staging: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "retail_warehouse", "target_name": "dev", "connection_name": "create_retail_warehouse_public_staging"} */
+create schema if not exists "public_staging"
+[0m23:29:03.513736 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m23:29:03.513736 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m23:29:03.579940 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.072 seconds
+[0m23:29:03.579940 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.071 seconds
+[0m23:29:03.579940 [debug] [ThreadPool]: On create_retail_warehouse_public_analytics: COMMIT
+[0m23:29:03.594064 [debug] [ThreadPool]: Using postgres connection "create_retail_warehouse_public_analytics"
+[0m23:29:03.596072 [debug] [ThreadPool]: On create_retail_warehouse_public_staging: COMMIT
+[0m23:29:03.596810 [debug] [ThreadPool]: On create_retail_warehouse_public_analytics: COMMIT
+[0m23:29:03.596810 [debug] [ThreadPool]: Using postgres connection "create_retail_warehouse_public_staging"
+[0m23:29:03.596810 [debug] [ThreadPool]: On create_retail_warehouse_public_staging: COMMIT
+[0m23:29:03.627430 [debug] [ThreadPool]: SQL status: COMMIT in 0.027 seconds
+[0m23:29:03.629425 [debug] [ThreadPool]: On create_retail_warehouse_public_analytics: Close
+[0m23:29:03.630445 [debug] [ThreadPool]: SQL status: COMMIT in 0.030 seconds
+[0m23:29:03.630445 [debug] [ThreadPool]: On create_retail_warehouse_public_staging: Close
+[0m23:29:03.639012 [debug] [ThreadPool]: Acquiring new postgres connection 'list_retail_warehouse_public_staging'
+[0m23:29:03.646394 [debug] [ThreadPool]: Acquiring new postgres connection 'list_retail_warehouse_public_analytics'
+[0m23:29:03.654903 [debug] [ThreadPool]: Using postgres connection "list_retail_warehouse_public_staging"
+[0m23:29:03.654903 [debug] [ThreadPool]: Using postgres connection "list_retail_warehouse_public_analytics"
+[0m23:29:03.660836 [debug] [ThreadPool]: On list_retail_warehouse_public_staging: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "retail_warehouse", "target_name": "dev", "connection_name": "list_retail_warehouse_public_staging"} */
+select
+      'retail_warehouse' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'retail_warehouse' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'retail_warehouse' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_staging'
+    union all
+    select distinct
+     'retail_warehouse' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'public_staging'
+  
+[0m23:29:03.663587 [debug] [ThreadPool]: On list_retail_warehouse_public_analytics: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "retail_warehouse", "target_name": "dev", "connection_name": "list_retail_warehouse_public_analytics"} */
+select
+      'retail_warehouse' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_analytics'
+    union all
+    select
+      'retail_warehouse' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_analytics'
+    union all
+    select
+      'retail_warehouse' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_analytics'
+    union all
+    select distinct
+     'retail_warehouse' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'public_analytics'
+  
+[0m23:29:03.663587 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:29:03.663587 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:29:03.865592 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.206 seconds
+[0m23:29:03.865592 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.207 seconds
+[0m23:29:03.865592 [debug] [ThreadPool]: On list_retail_warehouse_public_analytics: ROLLBACK
+[0m23:29:03.878379 [debug] [ThreadPool]: On list_retail_warehouse_public_staging: ROLLBACK
+[0m23:29:03.879849 [debug] [ThreadPool]: On list_retail_warehouse_public_staging: Close
+[0m23:29:03.879849 [debug] [ThreadPool]: On list_retail_warehouse_public_analytics: Close
+[0m23:29:03.895059 [debug] [MainThread]: Using postgres connection "master"
+[0m23:29:03.896823 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "retail_warehouse", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m23:29:03.898213 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:29:03.979882 [debug] [MainThread]: SQL status: SELECT 0 in 0.088 seconds
+[0m23:29:03.989964 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e0f07c94-c685-42e5-85e4-06c4f155fd34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001762A7827D0>]}
+[0m23:29:03.989964 [debug] [MainThread]: On master: ROLLBACK
+[0m23:29:03.995752 [debug] [MainThread]: On master: COMMIT
+[0m23:29:03.997276 [debug] [MainThread]: Using postgres connection "master"
+[0m23:29:03.998385 [debug] [MainThread]: On master: COMMIT
+[0m23:29:03.999988 [debug] [MainThread]: SQL status: COMMIT in 0.002 seconds
+[0m23:29:03.999988 [debug] [MainThread]: On master: Close
+[0m23:29:04.013746 [debug] [Thread-1 (]: Began running node model.retail_intelligence.stg_orders
+[0m23:29:04.013746 [info ] [Thread-1 (]: 1 of 3 START sql view model public_staging.stg_orders .......................... [RUN]
+[0m23:29:04.013746 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.retail_intelligence.stg_orders'
+[0m23:29:04.013746 [debug] [Thread-1 (]: Began compiling node model.retail_intelligence.stg_orders
+[0m23:29:04.030386 [debug] [Thread-1 (]: Writing injected SQL for node "model.retail_intelligence.stg_orders"
+[0m23:29:04.045915 [debug] [Thread-1 (]: Began executing node model.retail_intelligence.stg_orders
+[0m23:29:04.131051 [debug] [Thread-1 (]: Writing runtime sql for node "model.retail_intelligence.stg_orders"
+[0m23:29:04.146969 [debug] [Thread-1 (]: Using postgres connection "model.retail_intelligence.stg_orders"
+[0m23:29:04.146969 [debug] [Thread-1 (]: On model.retail_intelligence.stg_orders: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "retail_warehouse", "target_name": "dev", "node_id": "model.retail_intelligence.stg_orders"} */
+
+  create view "retail_warehouse"."public_staging"."stg_orders__dbt_tmp"
+    
+    
+  as (
+    WITH source_data AS (
+    SELECT
+        event_id,
+        customer_id,
+        product_id,
+        category,
+        price::NUMERIC(10, 2) AS unit_price,
+        quantity::INT AS quantity,
+        (price * quantity)::NUMERIC(10, 2) AS total_amount,
+        order_timestamp::TIMESTAMP WITH TIME ZONE AS order_timestamp,
+        order_timestamp::DATE AS order_date,
+        LOWER(TRIM(payment_method)) AS payment_method
+    FROM raw.orders
+)
+
+SELECT * FROM source_data
+  );
+[0m23:29:04.146969 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m23:29:04.253962 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.100 seconds
+[0m23:29:04.270667 [debug] [Thread-1 (]: Using postgres connection "model.retail_intelligence.stg_orders"
+[0m23:29:04.270667 [debug] [Thread-1 (]: On model.retail_intelligence.stg_orders: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "retail_warehouse", "target_name": "dev", "node_id": "model.retail_intelligence.stg_orders"} */
+alter table "retail_warehouse"."public_staging"."stg_orders__dbt_tmp" rename to "stg_orders"
+[0m23:29:04.279559 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.005 seconds
+[0m23:29:04.315216 [debug] [Thread-1 (]: On model.retail_intelligence.stg_orders: COMMIT
+[0m23:29:04.326411 [debug] [Thread-1 (]: Using postgres connection "model.retail_intelligence.stg_orders"
+[0m23:29:04.328847 [debug] [Thread-1 (]: On model.retail_intelligence.stg_orders: COMMIT
+[0m23:29:04.355193 [debug] [Thread-1 (]: SQL status: COMMIT in 0.028 seconds
+[0m23:29:04.365302 [debug] [Thread-1 (]: Applying DROP to: "retail_warehouse"."public_staging"."stg_orders__dbt_backup"
+[0m23:29:04.376381 [debug] [Thread-1 (]: Using postgres connection "model.retail_intelligence.stg_orders"
+[0m23:29:04.377381 [debug] [Thread-1 (]: On model.retail_intelligence.stg_orders: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "retail_warehouse", "target_name": "dev", "node_id": "model.retail_intelligence.stg_orders"} */
+drop view if exists "retail_warehouse"."public_staging"."stg_orders__dbt_backup" cascade
+[0m23:29:04.379567 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.003 seconds
+[0m23:29:04.379567 [debug] [Thread-1 (]: On model.retail_intelligence.stg_orders: Close
+[0m23:29:04.398256 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e0f07c94-c685-42e5-85e4-06c4f155fd34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001762ACD57E0>]}
+[0m23:29:04.398256 [info ] [Thread-1 (]: 1 of 3 OK created sql view model public_staging.stg_orders ..................... [[32mCREATE VIEW[0m in 0.38s]
+[0m23:29:04.398256 [debug] [Thread-1 (]: Finished running node model.retail_intelligence.stg_orders
+[0m23:29:04.405283 [debug] [Thread-3 (]: Began running node model.retail_intelligence.fct_orders
+[0m23:29:04.407863 [info ] [Thread-3 (]: 2 of 3 START sql table model public_analytics.fct_orders ....................... [RUN]
+[0m23:29:04.410637 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.retail_intelligence.fct_orders'
+[0m23:29:04.412716 [debug] [Thread-3 (]: Began compiling node model.retail_intelligence.fct_orders
+[0m23:29:04.413240 [debug] [Thread-3 (]: Writing injected SQL for node "model.retail_intelligence.fct_orders"
+[0m23:29:04.413240 [debug] [Thread-3 (]: Began executing node model.retail_intelligence.fct_orders
+[0m23:29:04.504962 [debug] [Thread-3 (]: Writing runtime sql for node "model.retail_intelligence.fct_orders"
+[0m23:29:04.510684 [debug] [Thread-3 (]: Using postgres connection "model.retail_intelligence.fct_orders"
+[0m23:29:04.511791 [debug] [Thread-3 (]: On model.retail_intelligence.fct_orders: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "retail_warehouse", "target_name": "dev", "node_id": "model.retail_intelligence.fct_orders"} */
+
+  
+    
+
+  create  table "retail_warehouse"."public_analytics"."fct_orders__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+SELECT
+    event_id AS order_id,
+    customer_id,
+    product_id,
+    category,
+    unit_price,
+    quantity,
+    total_amount,
+    payment_method,
+    order_timestamp,
+    order_date
+FROM "retail_warehouse"."public_staging"."stg_orders"
+  );
+  
+[0m23:29:04.512659 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m23:29:04.630717 [debug] [Thread-3 (]: SQL status: SELECT 500 in 0.126 seconds
+[0m23:29:04.657735 [debug] [Thread-3 (]: Using postgres connection "model.retail_intelligence.fct_orders"
+[0m23:29:04.660739 [debug] [Thread-3 (]: On model.retail_intelligence.fct_orders: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "retail_warehouse", "target_name": "dev", "node_id": "model.retail_intelligence.fct_orders"} */
+alter table "retail_warehouse"."public_analytics"."fct_orders__dbt_tmp" rename to "fct_orders"
+[0m23:29:04.664734 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m23:29:04.667734 [debug] [Thread-3 (]: On model.retail_intelligence.fct_orders: COMMIT
+[0m23:29:04.669736 [debug] [Thread-3 (]: Using postgres connection "model.retail_intelligence.fct_orders"
+[0m23:29:04.672210 [debug] [Thread-3 (]: On model.retail_intelligence.fct_orders: COMMIT
+[0m23:29:04.690842 [debug] [Thread-3 (]: SQL status: COMMIT in 0.018 seconds
+[0m23:29:04.698678 [debug] [Thread-3 (]: Applying DROP to: "retail_warehouse"."public_analytics"."fct_orders__dbt_backup"
+[0m23:29:04.704745 [debug] [Thread-3 (]: Using postgres connection "model.retail_intelligence.fct_orders"
+[0m23:29:04.704745 [debug] [Thread-3 (]: On model.retail_intelligence.fct_orders: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "retail_warehouse", "target_name": "dev", "node_id": "model.retail_intelligence.fct_orders"} */
+drop table if exists "retail_warehouse"."public_analytics"."fct_orders__dbt_backup" cascade
+[0m23:29:04.711475 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.002 seconds
+[0m23:29:04.715335 [debug] [Thread-3 (]: On model.retail_intelligence.fct_orders: Close
+[0m23:29:04.715335 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e0f07c94-c685-42e5-85e4-06c4f155fd34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017629125D80>]}
+[0m23:29:04.715335 [info ] [Thread-3 (]: 2 of 3 OK created sql table model public_analytics.fct_orders .................. [[32mSELECT 500[0m in 0.30s]
+[0m23:29:04.715335 [debug] [Thread-3 (]: Finished running node model.retail_intelligence.fct_orders
+[0m23:29:04.715335 [debug] [Thread-2 (]: Began running node model.retail_intelligence.dim_customers
+[0m23:29:04.730322 [info ] [Thread-2 (]: 3 of 3 START sql table model public_analytics.dim_customers .................... [RUN]
+[0m23:29:04.732093 [debug] [Thread-2 (]: Acquiring new postgres connection 'model.retail_intelligence.dim_customers'
+[0m23:29:04.732093 [debug] [Thread-2 (]: Began compiling node model.retail_intelligence.dim_customers
+[0m23:29:04.732093 [debug] [Thread-2 (]: Writing injected SQL for node "model.retail_intelligence.dim_customers"
+[0m23:29:04.732093 [debug] [Thread-2 (]: Began executing node model.retail_intelligence.dim_customers
+[0m23:29:04.746745 [debug] [Thread-2 (]: Writing runtime sql for node "model.retail_intelligence.dim_customers"
+[0m23:29:04.746745 [debug] [Thread-2 (]: Using postgres connection "model.retail_intelligence.dim_customers"
+[0m23:29:04.746745 [debug] [Thread-2 (]: On model.retail_intelligence.dim_customers: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "retail_warehouse", "target_name": "dev", "node_id": "model.retail_intelligence.dim_customers"} */
+
+  
+    
+
+  create  table "retail_warehouse"."public_analytics"."dim_customers__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+SELECT
+    customer_id,
+    MIN(order_date) AS first_order_date,
+    MAX(order_date) AS latest_order_date,
+    COUNT(order_id) AS total_orders,
+    SUM(total_amount) AS lifetime_value,
+    ROUND(AVG(total_amount), 2) AS avg_order_value
+FROM "retail_warehouse"."public_analytics"."fct_orders"
+GROUP BY customer_id
+  );
+  
+[0m23:29:04.754756 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m23:29:04.856059 [debug] [Thread-2 (]: SQL status: SELECT 80 in 0.102 seconds
+[0m23:29:04.863053 [debug] [Thread-2 (]: Using postgres connection "model.retail_intelligence.dim_customers"
+[0m23:29:04.863053 [debug] [Thread-2 (]: On model.retail_intelligence.dim_customers: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "retail_warehouse", "target_name": "dev", "node_id": "model.retail_intelligence.dim_customers"} */
+alter table "retail_warehouse"."public_analytics"."dim_customers__dbt_tmp" rename to "dim_customers"
+[0m23:29:04.868568 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m23:29:04.868568 [debug] [Thread-2 (]: On model.retail_intelligence.dim_customers: COMMIT
+[0m23:29:04.868568 [debug] [Thread-2 (]: Using postgres connection "model.retail_intelligence.dim_customers"
+[0m23:29:04.868568 [debug] [Thread-2 (]: On model.retail_intelligence.dim_customers: COMMIT
+[0m23:29:04.879179 [debug] [Thread-2 (]: SQL status: COMMIT in 0.008 seconds
+[0m23:29:04.879179 [debug] [Thread-2 (]: Applying DROP to: "retail_warehouse"."public_analytics"."dim_customers__dbt_backup"
+[0m23:29:04.895330 [debug] [Thread-2 (]: Using postgres connection "model.retail_intelligence.dim_customers"
+[0m23:29:04.895880 [debug] [Thread-2 (]: On model.retail_intelligence.dim_customers: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "retail_warehouse", "target_name": "dev", "node_id": "model.retail_intelligence.dim_customers"} */
+drop table if exists "retail_warehouse"."public_analytics"."dim_customers__dbt_backup" cascade
+[0m23:29:04.895880 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.001 seconds
+[0m23:29:04.895880 [debug] [Thread-2 (]: On model.retail_intelligence.dim_customers: Close
+[0m23:29:04.904926 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e0f07c94-c685-42e5-85e4-06c4f155fd34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001762ACB9B40>]}
+[0m23:29:04.911864 [info ] [Thread-2 (]: 3 of 3 OK created sql table model public_analytics.dim_customers ............... [[32mSELECT 80[0m in 0.17s]
+[0m23:29:04.913470 [debug] [Thread-2 (]: Finished running node model.retail_intelligence.dim_customers
+[0m23:29:04.917624 [debug] [MainThread]: On master: COMMIT
+[0m23:29:04.917624 [debug] [MainThread]: Using postgres connection "master"
+[0m23:29:04.921168 [debug] [MainThread]: On master: COMMIT
+[0m23:29:04.921168 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:29:04.964034 [debug] [MainThread]: SQL status: COMMIT in 0.041 seconds
+[0m23:29:04.965160 [debug] [MainThread]: On master: Close
+[0m23:29:04.965533 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:29:04.965533 [debug] [MainThread]: Connection 'create_retail_warehouse_public_staging' was properly closed.
+[0m23:29:04.965533 [debug] [MainThread]: Connection 'create_retail_warehouse_public_analytics' was properly closed.
+[0m23:29:04.965533 [debug] [MainThread]: Connection 'list_retail_warehouse_public_staging' was properly closed.
+[0m23:29:04.965533 [debug] [MainThread]: Connection 'list_retail_warehouse_public_analytics' was properly closed.
+[0m23:29:04.974055 [debug] [MainThread]: Connection 'model.retail_intelligence.stg_orders' was properly closed.
+[0m23:29:04.977904 [debug] [MainThread]: Connection 'model.retail_intelligence.fct_orders' was properly closed.
+[0m23:29:04.978906 [debug] [MainThread]: Connection 'model.retail_intelligence.dim_customers' was properly closed.
+[0m23:29:04.980152 [info ] [MainThread]: 
+[0m23:29:04.980152 [info ] [MainThread]: Finished running 2 table models, 1 view model in 0 hours 0 minutes and 2.32 seconds (2.32s).
+[0m23:29:04.980152 [debug] [MainThread]: Command end result
+[0m23:29:05.095950 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Rehan\retail-intelligence-pipeline\dbt_project\target\manifest.json
+[0m23:29:05.105960 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Rehan\retail-intelligence-pipeline\dbt_project\target\semantic_manifest.json
+[0m23:29:05.114048 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\Rehan\retail-intelligence-pipeline\dbt_project\target\osi_document.json
+[0m23:29:05.139062 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Rehan\retail-intelligence-pipeline\dbt_project\target\run_results.json
+[0m23:29:05.139062 [info ] [MainThread]: 
+[0m23:29:05.139062 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:29:05.145986 [info ] [MainThread]: 
+[0m23:29:05.145986 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=3
+[0m23:29:05.145986 [debug] [MainThread]: Command `dbt run` succeeded at 23:29:05.145986 after 8.11 seconds
+[0m23:29:05.145986 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017626AF9ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017629125D80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000176282E37C0>]}
+[0m23:29:05.145986 [debug] [MainThread]: Flushing usage events
+[0m23:29:16.258838 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:40:07.192432 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001768F129ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000176916B2D40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000176916B2B60>]}
+
+
+============================== 00:40:07.192432 | 70f30689-80c1-4476-86df-82ab307cfd25 ==============================
+[0m00:40:07.192432 [info ] [MainThread]: Running with dbt=1.12.5
+[0m00:40:07.207642 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': '.', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'invocation_command': 'dbt run --profiles-dir .', 'log_path': 'C:\\Users\\Rehan\\retail-intelligence-pipeline\\dbt_project\\logs'}
+[0m00:40:08.441946 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '70f30689-80c1-4476-86df-82ab307cfd25', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017690962290>]}
+[0m00:40:08.709051 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '70f30689-80c1-4476-86df-82ab307cfd25', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017690A02020>]}
+[0m00:40:08.713601 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m00:40:09.596985 [debug] [MainThread]: checksum: 4f3dc4228f1504262a79c49ff1fab889bb35cd8ab28769a6a656f847818f9693, vars: {}, profile: retail_warehouse, target: dev, version: 1.12.5
+[0m00:40:10.178559 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m00:40:10.188582 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m00:40:10.192094 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m00:40:10.224603 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '70f30689-80c1-4476-86df-82ab307cfd25', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017692D6A5C0>]}
+[0m00:40:10.748990 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Rehan\retail-intelligence-pipeline\dbt_project\target\manifest.json
+[0m00:40:10.772000 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Rehan\retail-intelligence-pipeline\dbt_project\target\semantic_manifest.json
+[0m00:40:10.982214 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\Rehan\retail-intelligence-pipeline\dbt_project\target\osi_document.json
+[0m00:40:11.016965 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '70f30689-80c1-4476-86df-82ab307cfd25', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017692DACDC0>]}
+[0m00:40:11.016965 [info ] [MainThread]: Found 3 models, 477 macros
+[0m00:40:11.021749 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '70f30689-80c1-4476-86df-82ab307cfd25', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017692DADBA0>]}
+[0m00:40:11.027421 [info ] [MainThread]: 
+[0m00:40:11.040920 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m00:40:11.042950 [info ] [MainThread]: 
+[0m00:40:11.042950 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m00:40:11.063789 [debug] [ThreadPool]: Acquiring new postgres connection 'list_retail_warehouse'
+[0m00:40:11.076305 [debug] [ThreadPool]: Acquiring new postgres connection 'list_retail_warehouse'
+[0m00:40:11.440667 [debug] [ThreadPool]: Using postgres connection "list_retail_warehouse"
+[0m00:40:11.440667 [debug] [ThreadPool]: Using postgres connection "list_retail_warehouse"
+[0m00:40:11.440667 [debug] [ThreadPool]: On list_retail_warehouse: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "retail_warehouse", "target_name": "dev", "connection_name": "list_retail_warehouse"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m00:40:11.440667 [debug] [ThreadPool]: On list_retail_warehouse: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "retail_warehouse", "target_name": "dev", "connection_name": "list_retail_warehouse"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m00:40:11.440667 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:40:11.440667 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:40:11.516529 [debug] [ThreadPool]: SQL status: SELECT 9 in 0.067 seconds
+[0m00:40:11.522567 [debug] [ThreadPool]: On list_retail_warehouse: Close
+[0m00:40:11.539530 [debug] [ThreadPool]: SQL status: SELECT 9 in 0.090 seconds
+[0m00:40:11.540980 [debug] [ThreadPool]: On list_retail_warehouse: Close
+[0m00:40:11.547033 [debug] [ThreadPool]: Acquiring new postgres connection 'list_retail_warehouse_public_staging'
+[0m00:40:11.557779 [debug] [ThreadPool]: Acquiring new postgres connection 'list_retail_warehouse_public_analytics'
+[0m00:40:11.557779 [debug] [ThreadPool]: Using postgres connection "list_retail_warehouse_public_staging"
+[0m00:40:11.568814 [debug] [ThreadPool]: Using postgres connection "list_retail_warehouse_public_analytics"
+[0m00:40:11.571517 [debug] [ThreadPool]: On list_retail_warehouse_public_staging: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "retail_warehouse", "target_name": "dev", "connection_name": "list_retail_warehouse_public_staging"} */
+select
+      'retail_warehouse' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'retail_warehouse' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'retail_warehouse' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_staging'
+    union all
+    select distinct
+     'retail_warehouse' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'public_staging'
+  
+[0m00:40:11.573931 [debug] [ThreadPool]: On list_retail_warehouse_public_analytics: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "retail_warehouse", "target_name": "dev", "connection_name": "list_retail_warehouse_public_analytics"} */
+select
+      'retail_warehouse' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_analytics'
+    union all
+    select
+      'retail_warehouse' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_analytics'
+    union all
+    select
+      'retail_warehouse' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_analytics'
+    union all
+    select distinct
+     'retail_warehouse' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'public_analytics'
+  
+[0m00:40:11.574116 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:40:11.574116 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:40:11.724047 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.154 seconds
+[0m00:40:11.724047 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.156 seconds
+[0m00:40:11.724047 [debug] [ThreadPool]: On list_retail_warehouse_public_analytics: ROLLBACK
+[0m00:40:11.737285 [debug] [ThreadPool]: On list_retail_warehouse_public_staging: ROLLBACK
+[0m00:40:11.740284 [debug] [ThreadPool]: On list_retail_warehouse_public_analytics: Close
+[0m00:40:11.741151 [debug] [ThreadPool]: On list_retail_warehouse_public_staging: Close
+[0m00:40:11.755972 [debug] [MainThread]: Using postgres connection "master"
+[0m00:40:11.758312 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "retail_warehouse", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m00:40:11.758312 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:40:11.837242 [debug] [MainThread]: SQL status: SELECT 1 in 0.077 seconds
+[0m00:40:11.840603 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '70f30689-80c1-4476-86df-82ab307cfd25', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017692D6BE20>]}
+[0m00:40:11.840603 [debug] [MainThread]: On master: ROLLBACK
+[0m00:40:11.840603 [debug] [MainThread]: On master: COMMIT
+[0m00:40:11.840603 [debug] [MainThread]: Using postgres connection "master"
+[0m00:40:11.840603 [debug] [MainThread]: On master: COMMIT
+[0m00:40:11.840603 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m00:40:11.840603 [debug] [MainThread]: On master: Close
+[0m00:40:11.858981 [debug] [Thread-1 (]: Began running node model.retail_intelligence.stg_orders
+[0m00:40:11.858981 [info ] [Thread-1 (]: 1 of 3 START sql view model public_staging.stg_orders .......................... [RUN]
+[0m00:40:11.858981 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.retail_intelligence.stg_orders'
+[0m00:40:11.858981 [debug] [Thread-1 (]: Began compiling node model.retail_intelligence.stg_orders
+[0m00:40:11.874619 [debug] [Thread-1 (]: Writing injected SQL for node "model.retail_intelligence.stg_orders"
+[0m00:40:11.890492 [debug] [Thread-1 (]: Began executing node model.retail_intelligence.stg_orders
+[0m00:40:12.024288 [debug] [Thread-1 (]: Writing runtime sql for node "model.retail_intelligence.stg_orders"
+[0m00:40:12.024288 [debug] [Thread-1 (]: Using postgres connection "model.retail_intelligence.stg_orders"
+[0m00:40:12.033802 [debug] [Thread-1 (]: On model.retail_intelligence.stg_orders: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "retail_warehouse", "target_name": "dev", "node_id": "model.retail_intelligence.stg_orders"} */
+
+  create view "retail_warehouse"."public_staging"."stg_orders__dbt_tmp"
+    
+    
+  as (
+    WITH source_data AS (
+    SELECT
+        event_id,
+        customer_id,
+        product_id,
+        category,
+        price::NUMERIC(10, 2) AS unit_price,
+        quantity::INT AS quantity,
+        (price * quantity)::NUMERIC(10, 2) AS total_amount,
+        order_timestamp::TIMESTAMP WITH TIME ZONE AS order_timestamp,
+        order_timestamp::DATE AS order_date,
+        LOWER(TRIM(payment_method)) AS payment_method
+    FROM raw.orders
+)
+
+SELECT * FROM source_data
+  );
+[0m00:40:12.037181 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m00:40:12.141509 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.108 seconds
+[0m00:40:12.157558 [debug] [Thread-1 (]: Using postgres connection "model.retail_intelligence.stg_orders"
+[0m00:40:12.157558 [debug] [Thread-1 (]: On model.retail_intelligence.stg_orders: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "retail_warehouse", "target_name": "dev", "node_id": "model.retail_intelligence.stg_orders"} */
+alter table "retail_warehouse"."public_staging"."stg_orders" rename to "stg_orders__dbt_backup"
+[0m00:40:12.157558 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.005 seconds
+[0m00:40:12.172609 [debug] [Thread-1 (]: Using postgres connection "model.retail_intelligence.stg_orders"
+[0m00:40:12.174760 [debug] [Thread-1 (]: On model.retail_intelligence.stg_orders: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "retail_warehouse", "target_name": "dev", "node_id": "model.retail_intelligence.stg_orders"} */
+alter table "retail_warehouse"."public_staging"."stg_orders__dbt_tmp" rename to "stg_orders"
+[0m00:40:12.176269 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.003 seconds
+[0m00:40:12.207624 [debug] [Thread-1 (]: On model.retail_intelligence.stg_orders: COMMIT
+[0m00:40:12.220525 [debug] [Thread-1 (]: Using postgres connection "model.retail_intelligence.stg_orders"
+[0m00:40:12.222529 [debug] [Thread-1 (]: On model.retail_intelligence.stg_orders: COMMIT
+[0m00:40:12.226038 [debug] [Thread-1 (]: SQL status: COMMIT in 0.012 seconds
+[0m00:40:12.255967 [debug] [Thread-1 (]: Applying DROP to: "retail_warehouse"."public_staging"."stg_orders__dbt_backup"
+[0m00:40:12.273526 [debug] [Thread-1 (]: Using postgres connection "model.retail_intelligence.stg_orders"
+[0m00:40:12.273680 [debug] [Thread-1 (]: On model.retail_intelligence.stg_orders: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "retail_warehouse", "target_name": "dev", "node_id": "model.retail_intelligence.stg_orders"} */
+drop view if exists "retail_warehouse"."public_staging"."stg_orders__dbt_backup" cascade
+[0m00:40:12.306967 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.038 seconds
+[0m00:40:12.323737 [debug] [Thread-1 (]: On model.retail_intelligence.stg_orders: Close
+[0m00:40:12.331127 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '70f30689-80c1-4476-86df-82ab307cfd25', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001768D69E8F0>]}
+[0m00:40:12.331635 [info ] [Thread-1 (]: 1 of 3 OK created sql view model public_staging.stg_orders ..................... [[32mCREATE VIEW[0m in 0.47s]
+[0m00:40:12.337130 [debug] [Thread-1 (]: Finished running node model.retail_intelligence.stg_orders
+[0m00:40:12.339132 [debug] [Thread-3 (]: Began running node model.retail_intelligence.fct_orders
+[0m00:40:12.341723 [info ] [Thread-3 (]: 2 of 3 START sql table model public_analytics.fct_orders ....................... [RUN]
+[0m00:40:12.341723 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.retail_intelligence.fct_orders'
+[0m00:40:12.341723 [debug] [Thread-3 (]: Began compiling node model.retail_intelligence.fct_orders
+[0m00:40:12.351899 [debug] [Thread-3 (]: Writing injected SQL for node "model.retail_intelligence.fct_orders"
+[0m00:40:12.354842 [debug] [Thread-3 (]: Began executing node model.retail_intelligence.fct_orders
+[0m00:40:12.421672 [debug] [Thread-3 (]: Writing runtime sql for node "model.retail_intelligence.fct_orders"
+[0m00:40:12.424467 [debug] [Thread-3 (]: Using postgres connection "model.retail_intelligence.fct_orders"
+[0m00:40:12.424467 [debug] [Thread-3 (]: On model.retail_intelligence.fct_orders: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "retail_warehouse", "target_name": "dev", "node_id": "model.retail_intelligence.fct_orders"} */
+
+  
+    
+
+  create  table "retail_warehouse"."public_analytics"."fct_orders__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+SELECT
+    event_id AS order_id,
+    customer_id,
+    product_id,
+    category,
+    unit_price,
+    quantity,
+    total_amount,
+    payment_method,
+    order_timestamp,
+    order_date
+FROM "retail_warehouse"."public_staging"."stg_orders"
+  );
+  
+[0m00:40:12.424467 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m00:40:12.537278 [debug] [Thread-3 (]: SQL status: SELECT 1000 in 0.108 seconds
+[0m00:40:12.540436 [debug] [Thread-3 (]: Using postgres connection "model.retail_intelligence.fct_orders"
+[0m00:40:12.540436 [debug] [Thread-3 (]: On model.retail_intelligence.fct_orders: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "retail_warehouse", "target_name": "dev", "node_id": "model.retail_intelligence.fct_orders"} */
+alter table "retail_warehouse"."public_analytics"."fct_orders" rename to "fct_orders__dbt_backup"
+[0m00:40:12.540436 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m00:40:12.557233 [debug] [Thread-3 (]: Using postgres connection "model.retail_intelligence.fct_orders"
+[0m00:40:12.557233 [debug] [Thread-3 (]: On model.retail_intelligence.fct_orders: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "retail_warehouse", "target_name": "dev", "node_id": "model.retail_intelligence.fct_orders"} */
+alter table "retail_warehouse"."public_analytics"."fct_orders__dbt_tmp" rename to "fct_orders"
+[0m00:40:12.557233 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m00:40:12.566752 [debug] [Thread-3 (]: On model.retail_intelligence.fct_orders: COMMIT
+[0m00:40:12.570382 [debug] [Thread-3 (]: Using postgres connection "model.retail_intelligence.fct_orders"
+[0m00:40:12.572385 [debug] [Thread-3 (]: On model.retail_intelligence.fct_orders: COMMIT
+[0m00:40:12.574389 [debug] [Thread-3 (]: SQL status: COMMIT in 0.008 seconds
+[0m00:40:12.574389 [debug] [Thread-3 (]: Applying DROP to: "retail_warehouse"."public_analytics"."fct_orders__dbt_backup"
+[0m00:40:12.590287 [debug] [Thread-3 (]: Using postgres connection "model.retail_intelligence.fct_orders"
+[0m00:40:12.590287 [debug] [Thread-3 (]: On model.retail_intelligence.fct_orders: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "retail_warehouse", "target_name": "dev", "node_id": "model.retail_intelligence.fct_orders"} */
+drop table if exists "retail_warehouse"."public_analytics"."fct_orders__dbt_backup" cascade
+[0m00:40:12.640075 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.050 seconds
+[0m00:40:12.640075 [debug] [Thread-3 (]: On model.retail_intelligence.fct_orders: Close
+[0m00:40:12.640075 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '70f30689-80c1-4476-86df-82ab307cfd25', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017691900220>]}
+[0m00:40:12.653877 [info ] [Thread-3 (]: 2 of 3 OK created sql table model public_analytics.fct_orders .................. [[32mSELECT 1000[0m in 0.30s]
+[0m00:40:12.657826 [debug] [Thread-3 (]: Finished running node model.retail_intelligence.fct_orders
+[0m00:40:12.657826 [debug] [Thread-2 (]: Began running node model.retail_intelligence.dim_customers
+[0m00:40:12.662147 [info ] [Thread-2 (]: 3 of 3 START sql table model public_analytics.dim_customers .................... [RUN]
+[0m00:40:12.662669 [debug] [Thread-2 (]: Acquiring new postgres connection 'model.retail_intelligence.dim_customers'
+[0m00:40:12.662669 [debug] [Thread-2 (]: Began compiling node model.retail_intelligence.dim_customers
+[0m00:40:12.672036 [debug] [Thread-2 (]: Writing injected SQL for node "model.retail_intelligence.dim_customers"
+[0m00:40:12.674682 [debug] [Thread-2 (]: Began executing node model.retail_intelligence.dim_customers
+[0m00:40:12.688705 [debug] [Thread-2 (]: Writing runtime sql for node "model.retail_intelligence.dim_customers"
+[0m00:40:12.691751 [debug] [Thread-2 (]: Using postgres connection "model.retail_intelligence.dim_customers"
+[0m00:40:12.691751 [debug] [Thread-2 (]: On model.retail_intelligence.dim_customers: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "retail_warehouse", "target_name": "dev", "node_id": "model.retail_intelligence.dim_customers"} */
+
+  
+    
+
+  create  table "retail_warehouse"."public_analytics"."dim_customers__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+SELECT
+    customer_id,
+    MIN(order_date) AS first_order_date,
+    MAX(order_date) AS latest_order_date,
+    COUNT(order_id) AS total_orders,
+    SUM(total_amount) AS lifetime_value,
+    ROUND(AVG(total_amount), 2) AS avg_order_value
+FROM "retail_warehouse"."public_analytics"."fct_orders"
+GROUP BY customer_id
+  );
+  
+[0m00:40:12.691751 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m00:40:12.780548 [debug] [Thread-2 (]: SQL status: SELECT 80 in 0.086 seconds
+[0m00:40:12.787120 [debug] [Thread-2 (]: Using postgres connection "model.retail_intelligence.dim_customers"
+[0m00:40:12.789118 [debug] [Thread-2 (]: On model.retail_intelligence.dim_customers: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "retail_warehouse", "target_name": "dev", "node_id": "model.retail_intelligence.dim_customers"} */
+alter table "retail_warehouse"."public_analytics"."dim_customers" rename to "dim_customers__dbt_backup"
+[0m00:40:12.791950 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m00:40:12.791950 [debug] [Thread-2 (]: Using postgres connection "model.retail_intelligence.dim_customers"
+[0m00:40:12.791950 [debug] [Thread-2 (]: On model.retail_intelligence.dim_customers: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "retail_warehouse", "target_name": "dev", "node_id": "model.retail_intelligence.dim_customers"} */
+alter table "retail_warehouse"."public_analytics"."dim_customers__dbt_tmp" rename to "dim_customers"
+[0m00:40:12.804134 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.003 seconds
+[0m00:40:12.809796 [debug] [Thread-2 (]: On model.retail_intelligence.dim_customers: COMMIT
+[0m00:40:12.809796 [debug] [Thread-2 (]: Using postgres connection "model.retail_intelligence.dim_customers"
+[0m00:40:12.809796 [debug] [Thread-2 (]: On model.retail_intelligence.dim_customers: COMMIT
+[0m00:40:12.823739 [debug] [Thread-2 (]: SQL status: COMMIT in 0.008 seconds
+[0m00:40:12.823739 [debug] [Thread-2 (]: Applying DROP to: "retail_warehouse"."public_analytics"."dim_customers__dbt_backup"
+[0m00:40:12.823739 [debug] [Thread-2 (]: Using postgres connection "model.retail_intelligence.dim_customers"
+[0m00:40:12.823739 [debug] [Thread-2 (]: On model.retail_intelligence.dim_customers: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "retail_warehouse", "target_name": "dev", "node_id": "model.retail_intelligence.dim_customers"} */
+drop table if exists "retail_warehouse"."public_analytics"."dim_customers__dbt_backup" cascade
+[0m00:40:12.857639 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.027 seconds
+[0m00:40:12.863155 [debug] [Thread-2 (]: On model.retail_intelligence.dim_customers: Close
+[0m00:40:12.863155 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '70f30689-80c1-4476-86df-82ab307cfd25', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001768D69E8F0>]}
+[0m00:40:12.863155 [info ] [Thread-2 (]: 3 of 3 OK created sql table model public_analytics.dim_customers ............... [[32mSELECT 80[0m in 0.20s]
+[0m00:40:12.873034 [debug] [Thread-2 (]: Finished running node model.retail_intelligence.dim_customers
+[0m00:40:12.874964 [debug] [MainThread]: On master: COMMIT
+[0m00:40:12.874964 [debug] [MainThread]: Using postgres connection "master"
+[0m00:40:12.874964 [debug] [MainThread]: On master: COMMIT
+[0m00:40:12.874964 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m00:40:12.910557 [debug] [MainThread]: SQL status: COMMIT in 0.035 seconds
+[0m00:40:12.910557 [debug] [MainThread]: On master: Close
+[0m00:40:12.910557 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m00:40:12.910557 [debug] [MainThread]: Connection 'list_retail_warehouse' was properly closed.
+[0m00:40:12.910557 [debug] [MainThread]: Connection 'list_retail_warehouse' was properly closed.
+[0m00:40:12.921125 [debug] [MainThread]: Connection 'list_retail_warehouse_public_staging' was properly closed.
+[0m00:40:12.923124 [debug] [MainThread]: Connection 'list_retail_warehouse_public_analytics' was properly closed.
+[0m00:40:12.924660 [debug] [MainThread]: Connection 'model.retail_intelligence.stg_orders' was properly closed.
+[0m00:40:12.924660 [debug] [MainThread]: Connection 'model.retail_intelligence.fct_orders' was properly closed.
+[0m00:40:12.924660 [debug] [MainThread]: Connection 'model.retail_intelligence.dim_customers' was properly closed.
+[0m00:40:12.924660 [info ] [MainThread]: 
+[0m00:40:12.924660 [info ] [MainThread]: Finished running 2 table models, 1 view model in 0 hours 0 minutes and 1.88 seconds (1.88s).
+[0m00:40:12.924660 [debug] [MainThread]: Command end result
+[0m00:40:13.024774 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Rehan\retail-intelligence-pipeline\dbt_project\target\manifest.json
+[0m00:40:13.041826 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Rehan\retail-intelligence-pipeline\dbt_project\target\semantic_manifest.json
+[0m00:40:13.055995 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\Rehan\retail-intelligence-pipeline\dbt_project\target\osi_document.json
+[0m00:40:13.075270 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Rehan\retail-intelligence-pipeline\dbt_project\target\run_results.json
+[0m00:40:13.088020 [info ] [MainThread]: 
+[0m00:40:13.090018 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m00:40:13.091749 [info ] [MainThread]: 
+[0m00:40:13.091749 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=3
+[0m00:40:13.091749 [debug] [MainThread]: Command `dbt run` succeeded at 00:40:13.091749 after 6.19 seconds
+[0m00:40:13.091749 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001768F129ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001769156C220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017691910700>]}
+[0m00:40:13.091749 [debug] [MainThread]: Flushing usage events
+[0m00:40:14.041296 [debug] [MainThread]: An error was encountered while trying to flush usage events

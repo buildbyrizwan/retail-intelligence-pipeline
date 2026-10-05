@@ -1,0 +1,19 @@
+# Data generation, cleaning & validation
+pandas>=2.2.0
+numpy>=1.26.0
+pydantic>=2.7.0
+faker>=25.0.0
+
+# Database drivers & ORM
+psycopg2-binary>=2.9.9
+SQLAlchemy>=2.0.30
+
+# Environment variables
+python-dotenv>=1.0.1
+
+# Dashboard
+streamlit>=1.35.0
+plotly>=5.22.0
+
+# Testing & code quality
+pytest>=8.2.0

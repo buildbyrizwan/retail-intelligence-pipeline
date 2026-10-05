@@ -1,0 +1,1 @@
+{"_invocation_id": "70f30689-80c1-4476-86df-82ab307cfd25", "linked": {"0": {"name": "model.retail_intelligence.dim_customers", "type": "model"}, "1": {"name": "model.retail_intelligence.fct_orders", "type": "model", "succ": [0]}, "2": {"name": "model.retail_intelligence.stg_orders", "type": "model", "succ": [1]}}}

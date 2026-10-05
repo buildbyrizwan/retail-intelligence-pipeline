@@ -1,0 +1,20 @@
+# Python environment & cache
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+
+# Environment variables & secrets
+.env
+
+# Database volume storage
+pgdata/
+
+# IDE files
+.vscode/
+.idea/
+
+# Testing & linting caches
+.pytest_cache/
+.ruff_cache/
