@@ -31,6 +31,22 @@ Streamlit Executive BI Dashboard
 
 ---
 
+## 📸 Platform & Pipeline Previews
+
+### 1. Executive Intelligence Dashboard
+Real-time KPI metrics, revenue trajectory, and category sales performance:
+![Dashboard Overview](assets/dashboard_overview.png)
+
+### 2. Customer Cohort & Lifetime Value (LTV) Analytics
+Granular customer segment distribution and top high-value accounts:
+![Customer Analytics](assets/customer_analytics.png)
+
+### 3. Automated dbt Star Schema Transformations
+Terminal output demonstrating dimensional table and view builds in PostgreSQL:
+![dbt Transformation Run](assets/dbt_pipeline_run.png)
+
+---
+
 ## ⚡ Tech Stack
 
 * **Data Ingestion & Validation:** Python 3.11, Pydantic, Faker, SQLAlchemy
